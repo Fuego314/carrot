@@ -12,7 +12,10 @@ $(function() {
 
   // HEADER
   $('.carrot-harvest').click(function () {
-    $(this).addClass('pull-carrot')
+    $(this).addClass('pull-carrot');
+    setTimeout(() => {
+      $(this).css('opacity', '0');
+    }, 4000);
   });
 
   // TYPES SECTION

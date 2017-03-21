@@ -2,6 +2,10 @@
   .container
     max-width: 600px
     margin: 0 auto
+    padding-bottom: 2.9em
+    @media(min-width: 768px)
+      max-width: 800px
+      padding-bottom: 3.9em
   .carrot-type
     position: relative
     overflow: hidden
@@ -65,5 +69,40 @@
       filter: brightness(1)
     .info-icon
       cursor: pointer
+
   .type-info.open-info
     transform: translateY(0)
+    @media(min-width: 590px)
+      transform: translateY(10px)
+    @media(min-width: 768px)
+      transform: translateY(6px)
+    @media(min-width: 1020px)
+      transform: translateY(13px)
+
+@media(min-width: 590px)
+  .types
+    .carrot-type
+      .type-main
+        height: 410px
+      .info-icon
+        top: 3.1em
+
+@media(min-width: 768px)
+  .types
+    .carrot-type
+      h4
+        margin-bottom: 1.6em
+      .info-icon
+        top: 3.6em
+
+@media(min-width: 1020px)
+  .types
+    .carrot-type
+      .type-main
+        height: 475px
+      .type-img
+        width: 6em
+      h4
+        margin-bottom: 1.4em
+      .info-icon
+        top: 4em

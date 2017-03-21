@@ -28,9 +28,24 @@
     margin-top: 0
 
 .pull-carrot
-  animation: pullCarrot 2.8s .2s forwards
+  animation: pullCarrot-sm 2.8s .2s forwards
+  @media(min-width: 768px)
+    animation: pullCarrot-md 3.2s .2s forwards
 
-@keyframes pullCarrot
+@media(min-width: 768px)
+  .header
+    height: 460px
+    .carrot-harvest
+      width: 4.5em
+      top: 305px
+    .carrot-logo
+      width: 7.5em
+    h1
+      margin-bottom: 0
+    h2
+      margin-top: .2em
+
+@keyframes pullCarrot-sm
   5%
     transform: rotate(4deg)
   10%
@@ -43,3 +58,16 @@
     transform: translatey(-8em)
   100%
     transform: translatey(-50em)
+@keyframes pullCarrot-md
+  7%
+    transform: rotate(8deg)
+  14%
+    transform: rotate(-8deg)
+  21%
+    transform: rotate(8deg)
+  28%
+    transform: rotate(-8deg)
+  60%
+    transform: translatey(-9em)
+  100%
+    transform: translatey(-55em)

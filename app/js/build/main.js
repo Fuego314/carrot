@@ -17,7 +17,12 @@ $(function () {
 
   // HEADER
   $('.carrot-harvest').click(function () {
+    var _this = this;
+
     $(this).addClass('pull-carrot');
+    setTimeout(function () {
+      $(_this).css('opacity', '0');
+    }, 4000);
   });
 
   // TYPES SECTION
