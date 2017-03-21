@@ -1,8 +1,7 @@
 .benefits
   position: relative
-  background: #e7e7e7
   .container
-    padding: 1.5em .5em
+    padding: 1.5em .5em 2em
   .benefits-carrot
     position: absolute
     display: none
@@ -17,6 +16,8 @@
     margin: .6em auto
   img
     display: none
+  &:last-of-type
+    margin-bottom: .4em
 
 @media(min-width: 340px)
   .benefits
@@ -24,8 +25,7 @@
       display: block
   .benefit
     align-items: center
-    width: 110px
-    margin-bottom: .75em
+    width: 109px
     word-wrap: break-word
     p
       margin: 0
@@ -43,24 +43,25 @@
         margin-right: .4em
         transform: rotateY(180deg)
     &:nth-of-type(1)
-      margin-top: 3em
+      margin-top: 2.5em
 
 @media(min-width: 360px)
   .benefits-content
     max-width: 354px
-    margin: 0 auto
+    margin: 0 auto 2em
   .benefit
-    width: 120px
-    margin-bottom: .1em
+    width: 121px
+    margin-bottom: .3em
 
 @media(min-width: 470px)
   .benefits-content
-    max-width: 400px  
+    max-width: 400px
+    margin-bottom: 2.7em
   .benefits
     .benefits-carrot
       width: 6.5em
   .benefit
-    width: 136px
+    width: 146px
     margin-bottom: .75em
     img
       margin-left: .6em
@@ -75,13 +76,16 @@
     .benefits-carrot
       width: 8em
   .benefit
-    width: 155px
+    width: 165px
     margin-bottom: 1.25em
     img
       margin-left: .6em
     &:nth-of-type(even)
       img
         margin-right: .6em
+    &:nth-of-type(1)
+      margin-top: 4em
+
 
 @media(min-width: 768px)
   .benefits-content
@@ -92,3 +96,5 @@
   .benefit
     width: 180px
     margin-bottom: 1.45em
+    &:nth-of-type(1)
+      margin-top: 5em

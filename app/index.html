@@ -7,7 +7,7 @@
     <title>Carrots!</title>
     <meta name="description" content="">
     <meta name="Author" content="Luke Tucker">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500|Cabin+Sketch:400,700|Open+Sans" rel="stylesheet">
     <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -16,11 +16,12 @@
   	<!-- endbuild -->
   </head>
   <body>
+
     <nav>
 
   		<div class="nav-brand">
   			<div class="container">
-  				<button class="navbar-toggle">
+  				<button class="navbar-toggle scrolled">
   					<span class="toggle-bar top-bar"></span>
   					<span class="toggle-bar middle-bar"></span>
   					<span class="toggle-bar bottom-bar"></span>
@@ -65,7 +66,7 @@
       </div><!-- container -->
     </section><!-- about -->
 
-    <section id="benefits" class="benefits">
+    <section id="benefits" class="benefits dark-bg">
       <div class="container">
         <div class="benefits-content">
 
@@ -181,6 +182,60 @@
           </div><!-- types slider -->
 
         </div><!-- types content -->
+      </div><!-- container -->
+    </section>
+
+    <section id="sign-up" class="sign-up">
+      <div class="container">
+				<div class="sign-up-content">
+					<h3 class="section-title">want to know more?</h3>
+					<p>Vestibulum faucibus ultricies lorem, eget efficitur quam posuere quis. Pellentesque vitae faucibus metus donec gravida sed ligula et sollicitudin.</p>
+					<form>
+						<input class="sign-up-email" type="email" name="more-info-email" placeholder="Enter your email address">
+            <input class="sign-up-btn" type="submit" value="find out more">
+					</form>
+				</div><!-- sign up content -->
+      </div><!-- container -->
+    </section>
+
+
+    <section id="contact" class="contact dark-bg">
+      <div class="container">
+        <div class="contact-content">
+
+          <h3 class="section-title">Questions</h3>
+
+          <form method="post" id="question-form" class="question-form">
+
+    				<div class="name-email">
+    					<!-- Name -->
+    					<div class="form-group">
+    						<label class="label" for="name">Name</label>
+    						<input id="name" name="name" type="text" class="form-control name" required>
+    					</div><!-- form group -->
+
+    					<!-- Email -->
+    					<div class="form-group">
+    						<label class="label" for="email">Email</label>
+    						<input id="email" name="email" type="email" class="form-control email" required>
+    					</div><!-- form group -->
+    				</div><!-- name email -->
+
+            <!-- Website -->
+            <div class="form-group">
+              <label class="control-label" for="website">Website</label>
+              <input id="website" name="website" type="text" class="form-control website">
+            </div>
+
+        		<!-- Question -->
+    				<label class="label" for="question">Question</label>
+            <textarea id="question" class="form-control message" rows="11" name="question" required></textarea>
+
+      			<input type="submit" value="Send Question" class="btn">
+    				<div class="result"><p></p></div>
+    			</form>
+
+        </div><!-- contact content -->
       </div><!-- container -->
     </section>
 

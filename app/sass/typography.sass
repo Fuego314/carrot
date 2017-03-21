@@ -5,6 +5,9 @@
 	font-weight: normal
 	font-style: normal
 
+body
+	font-family: 'Open Sans', sans-serif
+
 .section-title,
 .type-main h4
 	font-family: 'Cabin', sans-serif
@@ -32,11 +35,26 @@
 .section-title
 	font-size: 1.4rem
 
+p
+	letter-spacing: .9px
+	line-height: 1.6
+
+.about,
+.benefit,
+	p
+		font-size: .9rem
+		@media(min-width: 360px)
+			font-size: 1rem
+
+.about
+	p
+		@media(min-width: 565px)
+			text-align: center
+
 .benefit
 	text-align: center
 	line-height: 1.4
 	@media(min-width: 340px)
-		font-size: .8rem
 		&:nth-of-type(odd)
 			text-align: right
 		&:nth-of-type(even)
@@ -50,6 +68,19 @@
 	@media(min-width: 768px)
 		font-size: 1.2rem
 
+.benefit p
+	@media(min-width: 340px)
+		font-size: .8rem
+		line-height: 1.1
+		letter-spacing: 1px
+	@media(min-width: 360px)
+		font-size: .85rem
+	@media(min-width: 470px)
+		font-size: .95rem
+		line-height: 1.3
+	@media(min-width: 600px)
+		font-size: 1rem
+
 .types
 	h4
 		font-size: 1.1rem
@@ -57,3 +88,36 @@
 		 font-size: .9rem
 			@media(min-width: 768px)
 			  font-size: .95rem
+
+
+.contact .section-title
+	color: #fff
+.contact
+	.btn,
+	label
+		color: #fff
+		font-size: 1em
+		text-align: center
+		text-transform: uppercase
+		letter-spacing: 1.4px
+
+.sign-up
+	.section-title,
+	p
+		font-family: 'Cabin Sketch', cursive
+		color: #fff
+		text-align: center
+	.section-title
+		font-size: 2.2rem
+		font-weight: 600
+	p
+		font-size: 1.05rem
+	.sign-up-btn,
+	.sign-up-email
+		&::placeholder
+			color: #fff
+		color: #fff
+		font-family: 'Cabin Sketch', cursive
+		font-size: 1.2rem
+	.sign-up-btn
+		text-transform: uppercase

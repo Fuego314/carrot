@@ -11,30 +11,32 @@ nav
 		justify-content: space-between
 		height: 58px
 		padding: .75em 1em
-		.navbar-toggle
-			position: relative
-			left: 0
+	.navbar-toggle
+		position: relative
+		left: 0
+		margin-left: auto
+		padding: 0
+		background: none
+		border: none
+		outline: none
+		.toggle-bar
+			display: block
+			width: 1.563em
+			height: .125em
+			background: #fff
+			border-radius: .063em
+			transform-origin: left
+			transition: all .3s
 			margin-left: auto
-			padding: 0
-			background: none
-			border: none
-			outline: none
-			.toggle-bar
-				display: block
-				width: 1.563em
-				height: .125em
-				background: #fff
-				border-radius: .063em
-				transform-origin: left
-				transition: all .3s
-				&:nth-child(1)
-					margin-bottom: .313em
-					transform-origin: 10% 10%
-				&:nth-child(3)
-					margin-top: .313em
-					transform-origin: 10% 90%
-			@media(min-width: 768px)
-				display: none
+			margin-right: auto
+			&:nth-child(1)
+				margin-bottom: .313em
+				transform-origin: 10% 10%
+			&:nth-child(3)
+				margin-top: .313em
+				transform-origin: 10% 90%
+		@media(min-width: 768px)
+			display: none
 	.navbar
 		position: relative
 		z-index: -1
@@ -64,3 +66,13 @@ nav
 						width: 121px
 					&:nth-child(4)
 						width: 98px
+
+nav
+	.navbar-toggle.scrolled
+	  height: 45px
+	  width: 45px
+	  border-radius: 50%
+	  background: #e97534
+
+.navbar-toggle-open
+	transform: rotate(90deg)
