@@ -1,0 +1,72 @@
+.types
+  .carrot-type
+    position: relative
+    overflow: hidden
+    .type-main
+      height: 395px
+    h4
+      opacity: 0
+      margin-bottom: 2em
+    .type-img
+      display: block
+      width: 5em
+      margin: 0 auto
+      transform: scale(.5)
+      filter: brightness(.5)
+    .info-icon
+      position: absolute
+      width: 1.2em
+      top: 3.2em
+      left: 0
+      right: 0
+      margin: auto
+      opacity: 0
+    .type-info
+      position: absolute
+      display: flex
+      align-items: center
+      top: 3em
+      bottom: 0
+      left: 0
+      right: 0
+      padding: .5em
+      transform: translateY(100%)
+      background: #fff
+      img
+        position: absolute
+        top: .2em
+        left: 0
+        right: 0
+        width: 1.2em
+        margin: auto
+        cursor: pointer
+      ul
+        margin: 0 auto
+        padding: 0
+        list-style: none
+        li
+          margin-bottom: 1.75em
+    .chantenay-img
+      margin-top: 4em
+    .imperator-img
+      transform: translateY(-2.2em) scale(.5)
+
+.types
+  .carrot-type.slick-center
+    h4,
+    .info-icon
+      opacity: 1
+    .type-img
+      transform: scale(1)
+      filter: brightness(1)
+    .info-icon
+      cursor: pointer
+  .type-info.open-info
+    transform: translateY(0)
+
+
+
+.types .carrot-type h4,
+.types .carrot-type img,
+.types .type-info
+    transition: .4s

@@ -1,0 +1,94 @@
+.benefits
+  position: relative
+  background: #e7e7e7
+  .container
+    padding: 1.5em .5em
+  .benefits-carrot
+    position: absolute
+    display: none
+    width: 5.25em
+    left: 0
+    right: 0
+    margin: auto
+
+.benefit
+  display: flex
+  p
+    margin: .6em auto
+  img
+    display: none
+
+@media(min-width: 340px)
+  .benefits
+    .benefits-carrot
+      display: block
+  .benefit
+    align-items: center
+    width: 110px
+    margin-bottom: .75em
+    word-wrap: break-word
+    p
+      margin: 0
+    img
+      display: block
+      width: 1em
+      height: 1em
+      margin-left: .4em
+    &:nth-of-type(even)
+      position: relative
+      left: 0
+      margin-left: auto
+      img
+        margin-left: 0em
+        margin-right: .4em
+        transform: rotateY(180deg)
+    &:nth-of-type(1)
+      margin-top: 3em
+
+@media(min-width: 360px)
+  .benefits-content
+    max-width: 354px
+    margin: 0 auto
+  .benefit
+    width: 120px
+    margin-bottom: .1em
+
+@media(min-width: 470px)
+  .benefits-content
+    max-width: 400px  
+  .benefits
+    .benefits-carrot
+      width: 6.5em
+  .benefit
+    width: 136px
+    margin-bottom: .75em
+    img
+      margin-left: .6em
+    &:nth-of-type(even)
+      img
+        margin-right: .6em
+
+@media(min-width: 600px)
+  .benefits-content
+    max-width: 465px
+  .benefits
+    .benefits-carrot
+      width: 8em
+  .benefit
+    width: 155px
+    margin-bottom: 1.25em
+    img
+      margin-left: .6em
+    &:nth-of-type(even)
+      img
+        margin-right: .6em
+
+@media(min-width: 768px)
+  .benefits-content
+    max-width: 565px
+  .benefits
+    .benefits-carrot
+      width: 9.5em
+  .benefit
+    width: 180px
+    margin-bottom: 1.45em

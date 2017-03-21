@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,9 @@
     <meta name="Author" content="Luke Tucker">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
     <!-- build:css css/styles.min.css -->
-  	<link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
   	<link rel="stylesheet" href="css/main.css" >
   	<!-- endbuild -->
   </head>
@@ -53,7 +55,7 @@
       <div class="container">
         <div class="about-content">
 
-          <h3 class="about-title">About carrots</h3>
+          <h3 class="section-title">About carrots</h3>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit ligula ac consequat bibendum. Aenean rutrum sodales vehicula. Nullam et interdum leo, in consectetur ante. Cras mattis feugiat fringilla. Morbi posuere non magna hendrerit viverra. Vestibulum faucibus ultricies lorem, eget efficitur quam posuere quis. Pellentesque vitae faucibus metus. Nullam vel augue et ex sagittis suscipit.</p>
 
@@ -63,7 +65,128 @@
       </div><!-- container -->
     </section><!-- about -->
 
+    <section id="benefits" class="benefits">
+      <div class="container">
+        <div class="benefits-content">
+
+          <h3 class="section-title">the benefits</h3>
+
+          <img class="benefits-carrot" src="images/benefits-carrot.png" alt="The benefits of carrots">
+
+          <div class="benefit">
+            <p>Prevents heart disease</p>
+            <img src="images/arrow.svg" alt="Arrow">
+          </div><!-- benefit -->
+          <div class="benefit">
+            <img src="images/arrow.svg" alt="Arrow">
+            <p>Reduces high blood pressure</p>
+          </div><!-- benefit -->
+          <div class="benefit">
+            <p>Maintains good digestive health</p>
+            <img src="images/arrow.svg" alt="Arrow">
+          </div><!-- benefit -->
+          <div class="benefit">
+            <img src="images/arrow.svg" alt="Arrow">
+            <p>You want to see in the dark right? Eat up!</p>
+          </div><!-- benefit -->
+          <div class="benefit">
+            <p>Boosts immune system</p>
+            <img src="images/arrow.svg" alt="Arrow">
+          </div><!-- benefit -->
+          <div class="benefit">
+            <img src="images/arrow.svg" alt="Arrow">
+            <p>Regulates blood sugar levels</p>
+          </div><!-- benefit -->
+
+        </div><!-- benefits content -->
+      </div><!-- container -->
+    </section>
+
+    <section id="types" class="types">
+      <div class="container">
+        <div class="types-content">
+
+          <h3 class="section-title">types</h3>
+
+          <div class="types-slider">
+
+            <div class="carrot-type">
+              <div class="type-main">
+                <h4>Imperator</h4>
+                <img class="type-img imperator-img" src="images/imperator.svg" alt="Imperator Carrot">
+                <img class="info-icon" src="images/info.svg" alt="More Info">
+              </div><!-- type main -->
+              <div class="type-info">
+                <img src="images/close.svg" alt="Close Info">
+                <ul>
+                  <li>Large and very flavorful</li>
+                  <li>Excellent all-purpose carrot</li>
+                  <li>Many Imperator carrots are actually crosses between Nantes and Imperator types</li>
+                  <li>Most commonly grown carrot</li>
+                </ul>
+              </div><!-- type earth -->
+            </div><!-- carrot type -->
+
+            <div class="carrot-type">
+              <div class="type-main">
+                <h4>Nantes</h4>
+                <img class="type-img" src="images/nantes.svg" alt="Nantes Carrot">
+                <img class="info-icon" src="images/info.svg" alt="More Info">
+              </div><!-- type main -->
+              <div class="type-info">
+                <img src="images/close.svg" alt="Close Info">
+                <ul>
+                  <li>Extremely sweet and tender</li>
+                  <li>Available fall through spring</li>
+                  <li>Approximately forty different carrot cultivars fall under the Nantes variety name</li>
+                  <li>Originated over 5000 years ago in present-day Afghanistan</li>
+                </ul>
+              </div><!-- type earth -->
+            </div><!-- carrot type -->
+
+            <div class="carrot-type">
+              <div class="type-main">
+                <h4>Chantenay</h4>
+                <img class="type-img chantenay-img" src="images/chantenay.svg" alt="Chantenay Carrot">
+                <img class="info-icon" src="images/info.svg" alt="More Info">
+              </div><!-- type main -->
+              <div class="type-info">
+                <img src="images/close.svg" alt="Close Info">
+                <ul>
+                  <li>No need to peel</li>
+                  <li>Chantenay carrots contain around 90% water</li>
+                  <li>Originated from the Chantenay region of France</li>
+                  <li>Chantenay carrots contain a good level of fibre</li>
+                </ul>
+              </div><!-- type earth -->
+            </div><!-- carrot type -->
+
+            <div class="carrot-type">
+              <div class="type-main">
+                <h4>Danvers</h4>
+                <img class="type-img" src="images/danvers.svg" alt="Danvers Carrot">
+                <img class="info-icon" src="images/info.svg" alt="More Info">
+              </div><!-- type main -->
+              <div class="type-info">
+                <img src="images/close.svg" alt="Close Info">
+                <ul>
+                  <li>Known for being conical in shape</li>
+                  <li>Usually shorter than Imperator types</li>
+                  <li>Deep orange</li>
+                  <li>They arose in Danvers, Massachusetts in 1871</li>
+                </ul>
+              </div><!-- type earth -->
+            </div><!-- carrot type -->
+
+          </div><!-- types slider -->
+
+        </div><!-- types content -->
+      </div><!-- container -->
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!--build:js js/main.min.js -->
+    <script src="js/build/slick.js"></script>
     <script src="js/build/main.js"></script>
     <!-- endbuild -->
   </body>
