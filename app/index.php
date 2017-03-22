@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+
+$error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
+$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+$success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,12 +21,13 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:500|Cabin+Sketch:400,700|Open+Sans" rel="stylesheet">
     <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animsition.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-  	<link rel="stylesheet" href="css/main.css" >
+  	<link rel="stylesheet" href="css/main.css">
   	<!-- endbuild -->
   </head>
-  <body>
+  <body class="animsition">
 
     <nav>
 
@@ -198,41 +210,49 @@
       </div><!-- container -->
     </section>
 
-
     <section id="contact" class="contact dark-bg">
       <div class="container">
         <div class="contact-content">
 
           <h3 class="section-title">Questions</h3>
 
-          <form method="post" id="question-form" class="question-form">
+          <form action="question.php" method="POST" id="question-form" class="question-form">
 
     				<div class="name-email">
     					<!-- Name -->
     					<div class="form-group">
     						<label class="label" for="name">Name</label>
-    						<input id="name" name="name" type="text" class="form-control name" required>
+    						<input id="name" name="name" type="text" class="form-control name" <?php if (!empty($error)) { echo isset($fields['name']) ? ' value="' . $fields['name'] . '" ' : ''; } ?>>
     					</div><!-- form group -->
 
     					<!-- Email -->
     					<div class="form-group">
     						<label class="label" for="email">Email</label>
-    						<input id="email" name="email" type="email" class="form-control email" required>
+    						<input id="email" name="email" type="email" class="form-control email" <?php if (!empty($error)) { echo isset($fields['email']) ? ' value="' . $fields['email'] . '" ' : ''; } ?>>
     					</div><!-- form group -->
     				</div><!-- name email -->
 
             <!-- Website -->
             <div class="form-group">
               <label class="control-label" for="website">Website</label>
-              <input id="website" name="website" type="text" class="form-control website">
-            </div>
+              <input id="website" name="website" type="text" class="form-control website" <?php if (!empty($error)) { echo isset($fields['website']) ? ' value="' . $fields['website'] . '" ' : ''; } ?>>
+            </div><!-- website -->
 
         		<!-- Question -->
     				<label class="label" for="question">Question</label>
-            <textarea id="question" class="form-control message" rows="11" name="question" required></textarea>
+            <textarea id="question" class="form-control question" rows="11" name="question"><?php if (!empty($error)) { echo isset($fields['question']) ? $fields['question'] : ''; } ?></textarea>
 
       			<input type="submit" value="Send Question" class="btn">
-    				<div class="result"><p></p></div>
+
+            <div class="result">
+            <?php if (!empty($error)) { ?>
+              <p><?php echo $error; ?></p>
+            <?php } else { ?>
+              <p><?php echo $success; ?></p>
+            <?php } ?>
+            </div>
+
+            </div>
     			</form>
 
         </div><!-- contact content -->
@@ -241,8 +261,17 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!--build:js js/main.min.js -->
+    <script src="js/build/animsition.js"></script>
     <script src="js/build/slick.js"></script>
     <script src="js/build/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
+
+<?php
+
+unset($_SESSION['error']);
+unset($_SESSION['fields']);
+unset($_SESSION['success']);
+
+?>

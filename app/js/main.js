@@ -1,6 +1,15 @@
 $(function() {
   "use strict";
 
+  // Init animsition
+  $('.animsition').animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 750,
+    loading: false
+  });
+
   // NAV
   function navToggle() {
     $('.navbar-toggle').toggleClass('navbar-toggle-open');
@@ -59,5 +68,9 @@ $(function() {
   // Hide carrot info on arrow click and swipe
   $('.types-slider').on('beforeChange', (e) => hideInfo() );
 
+  // CONTACT
+  $('#question-form .btn').click((e) => {
+    window.location.hash = 'contact';
+  });
 
 });
